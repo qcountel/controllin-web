@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ru" data-lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Controllin — клиент Minecraft Bedrock 1.16.100.4 для геймпада</title>
+  <meta name="description" content="Controllin — клиент для Minecraft Bedrock 1.16.100.4 с полной поддержкой геймпада: Gamepad Viewer, Fast Inventory, Back Sprint, Hide Recipes и другие модули. PRO — 100 ₽ навсегда.">
+  <link rel="canonical" href="https://controllin.ru/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0a0b">
+  <meta property="og:title" content="Controllin — Bedrock 1.16.100.4 с геймпадом">
+  <meta property="og:description" content="Клиент с полной поддержкой геймпада, Gamepad Viewer и полезными твиками. PRO — 100 ₽ навсегда.">
+  <meta property="og:url" content="https://controllin.ru/">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=1">
+  <script>
+    (function () {
+      var l = null;
+      try { l = localStorage.getItem('controllin.lang'); } catch (e) {}
+      if (l !== 'en') l = 'ru';
+      document.documentElement.setAttribute('data-lang', l);
+      document.documentElement.setAttribute('lang', l);
+    })();
+  </script>
+  <script src="main.js?v=1" defer></script>
+  <script src="gamepad.js?v=1" defer></script>
+</head>
+<body>
+  <header class="top shell">
+    <a class="brand" href="#top" aria-label="Controllin">
+      <img src="logo.svg" width="40" height="40" alt="">
+      <span>CONTROLLIN</span>
+    </a>
+    <nav class="nav" aria-label="Навигация">
+      <a href="#features"><span lang="ru">Фишки</span><span lang="en">Features</span></a>
+      <a href="#modules"><span lang="ru">Модули</span><span lang="en">Modules</span></a>
+      <a href="#pro">PRO</a>
+      <a href="#install"><span lang="ru">Установка</span><span lang="en">Install</span></a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Язык / Language">
+      <button type="button" data-set-lang="ru">RU</button><span>/</span><button type="button" data-set-lang="en">EN</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ======================= HERO ======================= -->
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">MINECRAFT BEDROCK 1.16.100.4 · CLIENT</p>
+        <h1 class="hero-title">
+          <span lang="ru">Bedrock<br>с <em>геймпадом</em>,<br>как надо.</span>
+          <span lang="en">Bedrock<br>on a <em>gamepad</em>,<br>done right.</span>
+        </h1>
+        <p class="hero-lead">
+          <span lang="ru">Controllin — клиент для Minecraft Bedrock 1.16.100.4, сделанный под геймпад: меню клиента целиком управляется с геймпада, Gamepad Viewer, полезные твики и оверлеи. PRO — 100&nbsp;₽ навсегда.</span>
+          <span lang="en">Controllin is a Minecraft Bedrock 1.16.100.4 client built around the gamepad: the whole client menu works on a controller, plus Gamepad Viewer, handy tweaks and overlays. PRO is 100&nbsp;₽, forever.</span>
+        </p>
+
+        <div class="downloads">
+          <a class="dl primary" href="https://github.com/qcountel/controllin/releases/download/injector/Controllin.Injector.exe">
+            <b>↓ <span lang="ru">Лаунчер Controllin</span><span lang="en">Controllin Launcher</span></b>
+            <small><span lang="ru">запуск клиента в один клик</span><span lang="en">starts the client in one click</span></small>
+          </a>
+          <a class="dl" href="https://github.com/qcountel/installer/releases/download/v1.0/installer.exe">
+            <b>↓ <span lang="ru">Установщик 1.16.100.4</span><span lang="en">1.16.100.4 installer</span></b>
+            <small><span lang="ru">нужная версия игры</span><span lang="en">the right game version</span></small>
+          </a>
+        </div>
+
+        <div class="links">
+          <a class="pill" href="https://t.me/+rweTeGr1vOxjM2Qy" target="_blank" rel="noopener"><span lang="ru">Чат Controllin</span><span lang="en">Controllin chat</span> ↗</a>
+          <a class="pill" href="https://t.me/cntrlln" target="_blank" rel="noopener"><span lang="ru">Канал Controllin</span><span lang="en">Controllin channel</span> ↗</a>
+          <a class="pill" href="https://t.me/anx1ous" target="_blank" rel="noopener"><i><span lang="ru">создатель</span><span lang="en">creator</span></i> @anx1ous</a>
+          <a class="pill" href="https://t.me/nigger1790" target="_blank" rel="noopener"><i><span lang="ru">создатель</span><span lang="en">creator</span></i> @k4ties</a>
+          <a class="pill" href="https://t.me/kqnepp" target="_blank" rel="noopener"><i><span lang="ru">админ чата</span><span lang="en">chat admin</span></i> @kqnepp</a>
+        </div>
+      </div>
+
+      <figure class="pad" aria-label="Gamepad Viewer">
+        <div class="pad-bar">
+          <span>GAMEPAD VIEWER</span>
+          <div class="pad-skins" role="group" aria-label="Skin">
+            <button type="button" class="chip active" data-skin="v4pro" aria-pressed="true">v4pro</button>
+            <button type="button" class="chip" data-skin="ds4" aria-pressed="false">dualshock 4</button>
+          </div>
+        </div>
+        <canvas class="pad-canvas" id="padCanvas" role="img" aria-label="Gamepad Viewer"></canvas>
+        <span class="pad-live" aria-hidden="true">LIVE</span>
+      </figure>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>GAMEPAD VIEWER / FAST INVENTORY / BACK SPRINT / HIDE RECIPES / ITEM DELAY FIX / NO CAM RESET / HITBOX / CROSSHAIR / CPS COUNTER / </span>
+        <span>GAMEPAD VIEWER / FAST INVENTORY / BACK SPRINT / HIDE RECIPES / ITEM DELAY FIX / NO CAM RESET / HITBOX / CROSSHAIR / CPS COUNTER / </span>
+      </div>
+    </div>
+
+    <!-- ======================= FEATURES ======================= -->
+    <section class="section shell" id="features">
+      <header class="section-head">
+        <p class="eyebrow">01 / <span lang="ru">ФИШКИ</span><span lang="en">FEATURES</span></p>
+        <h2><span lang="ru">Что умеет Controllin.</span><span lang="en">What Controllin does.</span></h2>
+      </header>
+
+      <article class="feature big">
+        <div class="num">01</div>
+        <div>
+          <h3><span lang="ru">Полная поддержка геймпада</span><span lang="en">Full gamepad support</span></h3>
+          <p>
+            <span lang="ru">Меню клиента целиком управляется с геймпада: курсор — стиком, выбор — кнопками, открытие — двойным START. Чувствительность камеры, мёртвая зона, скорость и чувствительность курсора в инвентаре настраиваются, а курсор остаётся на месте после повторного открытия инвентаря. Бинды модулей вешаются на кнопки геймпада и подтверждаются вибрацией.</span>
+            <span lang="en">The whole client menu works on a gamepad: cursor on the stick, buttons to pick, double START to open it. Camera sensitivity, dead zone, inventory cursor speed and sensitivity are adjustable, and the cursor stays where it was when you reopen the inventory. Module binds go on gamepad buttons and are confirmed with rumble.</span>
+          </p>
+        </div>
+      </article>
+
+      <div class="feature-grid">
+        <article class="feature">
+          <div class="num">02</div>
+          <h3>Gamepad Viewer <b class="tag">PRO</b></h3>
+          <p>
+            <span lang="ru">Нажатия геймпада на экране, как keystrokes. Скины v4pro и DualShock 4, свой цвет для каждой детали. Тот самый оверлей, что наверху страницы — подключи геймпад и попробуй.</span>
+            <span lang="en">Your gamepad inputs on screen, like keystrokes. v4pro and DualShock 4 skins, a colour for every part. The very overlay at the top of this page — plug in a gamepad and try it.</span>
+          </p>
+        </article>
+        <article class="feature">
+          <div class="num">03</div>
+          <h3>Fast Inventory <b class="tag">PRO</b></h3>
+          <p>
+            <span lang="ru">Инвентарь открывается мгновенно, не дожидаясь ответа сервера. На высоком пинге разница огромная.</span>
+            <span lang="en">The inventory opens instantly, without waiting for the server. Huge difference on high ping.</span>
+          </p>
+        </article>
+        <article class="feature">
+          <div class="num">04</div>
+          <h3>Hide Recipes</h3>
+          <p>
+            <span lang="ru">Убирает книгу рецептов из инвентаря и верстака — LT/RT больше не открывают её случайно.</span>
+            <span lang="en">Removes the recipe book from the inventory and crafting table — LT/RT no longer open it by accident.</span>
+          </p>
+        </article>
+        <article class="feature">
+          <div class="num">05</div>
+          <h3>Back Sprint <b class="tag">PRO</b></h3>
+          <p>
+            <span lang="ru">Бег при движении назад — и с клавиатуры (S), и стиком.</span>
+            <span lang="en">Sprint while walking backward — on the keyboard (S) and on the stick.</span>
+          </p>
+        </article>
+        <article class="feature">
+          <div class="num">06</div>
+          <h3>Item Delay Fix</h3>
+          <p>
+            <span lang="ru">Убирает задержку 200 мс на использование предмета после удара.</span>
+            <span lang="en">Removes the 200 ms item use delay after an attack.</span>
+          </p>
+        </article>
+        <article class="feature">
+          <div class="num">07</div>
+          <h3>No Cam Reset</h3>
+          <p>
+            <span lang="ru">Сервер больше не может развернуть твою камеру — прицел остаётся там, куда ты смотришь.</span>
+            <span lang="en">The server can no longer turn your camera — your aim stays where you look.</span>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======================= MODULES ======================= -->
+    <section class="section shell" id="modules">
+      <header class="section-head">
+        <p class="eyebrow">02 / <span lang="ru">МОДУЛИ</span><span lang="en">MODULES</span></p>
+        <h2><span lang="ru">Все модули.</span><span lang="en">All modules.</span></h2>
+        <p class="section-lead">
+          <span lang="ru">Большая часть клиента бесплатная. PRO открывает оверлеи и твики, отмеченные справа.</span>
+          <span lang="en">Most of the client is free. PRO unlocks the overlays and tweaks listed on the right.</span>
+        </p>
+      </header>
+
+      <div class="mod-cols">
+        <div class="mod-col">
+          <div class="mod-col-head"><span lang="ru">БЕСПЛАТНО</span><span lang="en">FREE</span><b>16</b></div>
+          <ul class="mods">
+            <li><b>Sensitivity</b><span lang="ru">множитель чувствительности камеры на геймпаде</span><span lang="en">gamepad camera sensitivity multiplier</span></li>
+            <li><b>Gamepad Camera Dead Zone</b><span lang="ru">мёртвая зона стика камеры</span><span lang="en">camera stick dead zone</span></li>
+            <li><b>GP Cursor Sensitivity</b><span lang="ru">чувствительность курсора в инвентаре</span><span lang="en">inventory cursor sensitivity</span></li>
+            <li><b>Gamepad Cursor Speed</b><span lang="ru">скорость курсора меню на левом стике</span><span lang="en">menu cursor speed on the left stick</span></li>
+            <li><b>Keep Cursor Pos</b><span lang="ru">курсор на том же месте после повторного открытия инвентаря</span><span lang="en">cursor stays put when you reopen the inventory</span></li>
+            <li><b>Item Delay Fix</b><span lang="ru">без задержки 200 мс после удара</span><span lang="en">no 200 ms delay after an attack</span></li>
+            <li><b>No Cam Reset</b><span lang="ru">сервер не поворачивает камеру</span><span lang="en">the server can't turn your camera</span></li>
+            <li><b>No Hurt Cam</b><span lang="ru">камера не трясётся при уроне</span><span lang="en">no camera shake when hurt</span></li>
+            <li><b>Hide Recipes</b><span lang="ru">без книги рецептов</span><span lang="en">no recipe book</span></li>
+            <li><b>Auto Sprint</b><span lang="ru">бег без зажатия кнопки</span><span lang="en">sprints for you</span></li>
+            <li><b>VSync</b><span lang="ru">вертикальная синхронизация в один клик</span><span lang="en">toggle vsync in one click</span></li>
+            <li><b>Fullbright</b><span lang="ru">максимальная яркость</span><span lang="en">maximum gamma</span></li>
+            <li><b>FPS Counter</b><span lang="ru">FPS, время кадра и сколько стоят оверлеи</span><span lang="en">fps, frame time and overlay cost</span></li>
+            <li><b>Hitbox</b><span lang="ru">хитбоксы сущностей, как F3 + B в Java</span><span lang="en">entity hitboxes, like F3 + B in Java</span></li>
+            <li><b>Bind Feedback</b><span lang="ru">подсказка на экране и вибрация при срабатывании бинда</span><span lang="en">on-screen note and rumble when a bind fires</span></li>
+            <li><b>Console</b><span lang="ru">окно отладочной консоли</span><span lang="en">debug console window</span></li>
+          </ul>
+        </div>
+        <div class="mod-col pro-col">
+          <div class="mod-col-head">PRO · 100 ₽<b>8</b></div>
+          <ul class="mods">
+            <li><b>Gamepad Viewer</b><span lang="ru">нажатия геймпада на экране, скины и цвета</span><span lang="en">gamepad inputs on screen, skins and colours</span></li>
+            <li><b>Fast Inventory</b><span lang="ru">инвентарь открывается мгновенно</span><span lang="en">the inventory opens instantly</span></li>
+            <li><b>Back Sprint</b><span lang="ru">бег назад</span><span lang="en">sprint backward</span></li>
+            <li><b>Minimal GUI Scale</b><span lang="ru">минимальный размер интерфейса</span><span lang="en">the smallest GUI scale</span></li>
+            <li><b>Fullscreen Key</b><span lang="ru">полный экран по F11 или кнопке геймпада</span><span lang="en">fullscreen on F11 or a gamepad button</span></li>
+            <li><b>CPS Counter</b><span lang="ru">клики в секунду: мышь и геймпад</span><span lang="en">clicks per second: mouse and gamepad</span></li>
+            <li><b>Crosshair</b><span lang="ru">свой прицел: форма, цвет, размер</span><span lang="en">custom crosshair: shape, colour, size</span></li>
+            <li><b>Self Nametag</b><span lang="ru">свой ник над головой от третьего лица</span><span lang="en">your own nametag in third person</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= PRO ======================= -->
+    <section class="section shell" id="pro">
+      <header class="section-head">
+        <p class="eyebrow">03 / PRO</p>
+        <h2><span lang="ru">Один раз — навсегда.</span><span lang="en">Pay once — keep it forever.</span></h2>
+      </header>
+      <div class="pro">
+        <div class="price">
+          <div class="price-num">100<span>₽</span></div>
+          <p><span lang="ru">навсегда, без продлений</span><span lang="en">forever, no renewals</span></p>
+          <a class="dl primary" href="https://t.me/anx1ous" target="_blank" rel="noopener">
+            <b><span lang="ru">Купить PRO</span><span lang="en">Buy PRO</span> ↗</b>
+            <small><span lang="ru">написать создателю @anx1ous</span><span lang="en">message the creator @anx1ous</span></small>
+          </a>
+        </div>
+        <ul class="pro-list">
+          <li><span lang="ru">Все 8 PRO-модулей: Gamepad Viewer, Fast Inventory, Back Sprint, Minimal GUI Scale, Fullscreen Key, CPS Counter, Crosshair, Self Nametag.</span><span lang="en">All 8 PRO modules: Gamepad Viewer, Fast Inventory, Back Sprint, Minimal GUI Scale, Fullscreen Key, CPS Counter, Crosshair, Self Nametag.</span></li>
+          <li><span lang="ru">Бесплатные модули остаются бесплатными — PRO только добавляет.</span><span lang="en">Free modules stay free — PRO only adds on top.</span></li>
+          <li><span lang="ru">Как купить: напиши <a href="https://t.me/anx1ous" target="_blank" rel="noopener">@anx1ous</a> в Telegram, после оплаты PRO активируется для тебя.</span><span lang="en">How to buy: message <a href="https://t.me/anx1ous" target="_blank" rel="noopener">@anx1ous</a> on Telegram, PRO is activated for you after the payment.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= INSIDE ======================= -->
+    <section class="section shell" id="inside">
+      <header class="section-head">
+        <p class="eyebrow">04 / <span lang="ru">ВНУТРИ</span><span lang="en">INSIDE</span></p>
+        <h2><span lang="ru">Что внутри.</span><span lang="en">What's inside.</span></h2>
+      </header>
+      <div class="inside">
+        <div><h3><span lang="ru">Своё меню</span><span lang="en">Own menu</span></h3><p><span lang="ru">Меню на egui поверх DirectX 11. Работает с мышью, клавиатурой и геймпадом, открывается по Insert / F12 или двойному START.</span><span lang="en">An egui menu on top of DirectX 11. Works with mouse, keyboard and gamepad, opens on Insert / F12 or double START.</span></p></div>
+        <div><h3><span lang="ru">Конфиги</span><span lang="en">Configs</span></h3><p><span lang="ru">Включённые модули, бинды, цвета и ползунки сохраняются и подхватываются при следующем запуске.</span><span lang="en">Enabled modules, binds, colours and sliders are saved and loaded on the next start.</span></p></div>
+        <div><h3><span lang="ru">Лаунчер</span><span lang="en">Launcher</span></h3><p><span lang="ru">Лаунчер Controllin сам запускает игру, скачивает свежую версию клиента из GitHub-релизов, выдаёт нужные права и подключает клиент.</span><span lang="en">The Controllin Launcher starts the game, downloads the latest client from GitHub releases, sets the needed permissions and loads the client.</span></p></div>
+        <div><h3>Rust</h3><p><span lang="ru">Клиент написан на Rust: быстрый и аккуратный, оверлеи почти не влияют на FPS.</span><span lang="en">The client is written in Rust: fast and careful, overlays barely touch your FPS.</span></p></div>
+      </div>
+    </section>
+
+    <!-- ======================= INSTALL ======================= -->
+    <section class="section shell" id="install">
+      <header class="section-head">
+        <p class="eyebrow">05 / <span lang="ru">УСТАНОВКА</span><span lang="en">INSTALL</span></p>
+        <h2><span lang="ru">Как установить.</span><span lang="en">How to install.</span></h2>
+      </header>
+      <ol class="steps">
+        <li>
+          <b><span lang="ru">Установи игру 1.16.100.4</span><span lang="en">Install game version 1.16.100.4</span></b>
+          <p><span lang="ru">Скачай <a href="https://github.com/qcountel/installer/releases/download/v1.0/installer.exe">установщик 1.16.100.4</a> и запусти его — он поставит нужную версию Minecraft Bedrock.</span><span lang="en">Download the <a href="https://github.com/qcountel/installer/releases/download/v1.0/installer.exe">1.16.100.4 installer</a> and run it — it installs the right Minecraft Bedrock version.</span></p>
+        </li>
+        <li>
+          <b><span lang="ru">Скачай Лаунчер Controllin</span><span lang="en">Download the Controllin Launcher</span></b>
+          <p><span lang="ru">Скачай <a href="https://github.com/qcountel/controllin/releases/download/injector/Controllin.Injector.exe">Лаунчер Controllin</a> и запусти.</span><span lang="en">Download the <a href="https://github.com/qcountel/controllin/releases/download/injector/Controllin.Injector.exe">Controllin Launcher</a> and run it.</span></p>
+        </li>
+        <li>
+          <b><span lang="ru">Играй</span><span lang="en">Play</span></b>
+          <p><span lang="ru">Лаунчер запустит игру и подключит клиент. В игре открой меню Controllin: Insert / F12 на клавиатуре или двойное нажатие START на геймпаде.</span><span lang="en">The launcher starts the game and loads the client. In game, open the Controllin menu: Insert / F12 on the keyboard or double START on the gamepad.</span></p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ======================= FAQ ======================= -->
+    <section class="section shell" id="faq">
+      <header class="section-head">
+        <p class="eyebrow">06 / FAQ</p>
+        <h2><span lang="ru">Вопросы.</span><span lang="en">Questions.</span></h2>
+      </header>
+      <div class="faq">
+        <details>
+          <summary><span lang="ru">На каких версиях работает?</span><span lang="en">Which game versions are supported?</span></summary>
+          <p><span lang="ru">Только Minecraft Bedrock 1.16.100.4 для Windows. Поставить её можно установщиком выше.</span><span lang="en">Only Minecraft Bedrock 1.16.100.4 for Windows. Install it with the installer above.</span></p>
+        </details>
+        <details>
+          <summary><span lang="ru">Нужен ли геймпад?</span><span lang="en">Do I need a gamepad?</span></summary>
+          <p><span lang="ru">Нет. Клиент работает и с мышью и клавиатурой, но геймпад — его главная фишка: меню, курсор и бинды полностью с геймпада.</span><span lang="en">No. The client works with mouse and keyboard too, but the gamepad is its main thing: menu, cursor and binds fully on the controller.</span></p>
+        </details>
+        <details>
+          <summary><span lang="ru">Какие геймпады поддерживаются?</span><span lang="en">Which gamepads are supported?</span></summary>
+          <p><span lang="ru">Любые, которые игра видит как XInput-геймпад: Xbox, Flydigi, DualShock / DualSense через Steam или DS4Windows и другие.</span><span lang="en">Any gamepad the game sees as XInput: Xbox, Flydigi, DualShock / DualSense through Steam or DS4Windows, and others.</span></p>
+        </details>
+        <details>
+          <summary><span lang="ru">Как открыть меню клиента?</span><span lang="en">How do I open the client menu?</span></summary>
+          <p><span lang="ru">Insert или F12 на клавиатуре, двойное нажатие START на геймпаде.</span><span lang="en">Insert or F12 on the keyboard, double START on the gamepad.</span></p>
+        </details>
+        <details>
+          <summary><span lang="ru">Сколько стоит PRO и как купить?</span><span lang="en">How much is PRO and how do I buy it?</span></summary>
+          <p><span lang="ru">100 ₽ навсегда. Напиши <a href="https://t.me/anx1ous" target="_blank" rel="noopener">@anx1ous</a> в Telegram.</span><span lang="en">100 ₽, forever. Message <a href="https://t.me/anx1ous" target="_blank" rel="noopener">@anx1ous</a> on Telegram.</span></p>
+        </details>
+        <details>
+          <summary><span lang="ru">Антивирус ругается на лаунчер</span><span lang="en">My antivirus flags the launcher</span></summary>
+          <p><span lang="ru">Лаунчер подключает DLL к процессу игры — антивирусы часто так реагируют на любые инжекторы. Качай лаунчер только по ссылкам с этого сайта.</span><span lang="en">The launcher loads a DLL into the game process — antiviruses often react like this to any injector. Only download the launcher from the links on this site.</span></p>
+        </details>
+        <details>
+          <summary><span lang="ru">Что-то не работает — куда писать?</span><span lang="en">Something doesn't work — who do I ask?</span></summary>
+          <p><span lang="ru">В <a href="https://t.me/+rweTeGr1vOxjM2Qy" target="_blank" rel="noopener">чат Controllin</a> — там помогут, новости выходят в <a href="https://t.me/cntrlln" target="_blank" rel="noopener">канале</a>.</span><span lang="en">In the <a href="https://t.me/+rweTeGr1vOxjM2Qy" target="_blank" rel="noopener">Controllin chat</a> — people there will help; news goes to the <a href="https://t.me/cntrlln" target="_blank" rel="noopener">channel</a>.</span></p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot shell">
+    <div class="brand small"><img src="logo.svg" width="28" height="28" alt=""><span>CONTROLLIN</span></div>
+    <div class="foot-links">
+      <a href="https://t.me/+rweTeGr1vOxjM2Qy" target="_blank" rel="noopener"><span lang="ru">Чат</span><span lang="en">Chat</span></a>
+      <a href="https://t.me/cntrlln" target="_blank" rel="noopener"><span lang="ru">Канал</span><span lang="en">Channel</span></a>
+      <a href="https://t.me/anx1ous" target="_blank" rel="noopener">@anx1ous</a>
+      <a href="https://t.me/nigger1790" target="_blank" rel="noopener">@k4ties</a>
+      <a href="https://t.me/kqnepp" target="_blank" rel="noopener">@kqnepp</a>
+    </div>
+    <p class="foot-note"><span lang="ru">Не связан с Mojang и Microsoft.</span><span lang="en">Not affiliated with Mojang or Microsoft.</span> © <span id="year">2026</span> Controllin</p>
+  </footer>
+</body>
+</html>
