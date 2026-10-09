@@ -45,12 +45,12 @@ html[data-lang="ru"] body [lang="en"], html[data-lang="en"] body [lang="ru"] { d
 .hero-title em { font-style: normal; color: var(--accent); }
 .hero-lead { color: var(--muted); font-size: 18px; max-width: 560px; }
 .downloads { display: flex; flex-wrap: wrap; gap: 12px; margin: 32px 0 22px; }
-.dl { display: flex; flex-direction: column; gap: 4px; min-width: 250px; padding: 15px 20px; border: 1px solid var(--line-2); border-radius: 4px; background: var(--surface); font-family: var(--mono); text-transform: uppercase; transition: border-color .15s, background .15s, transform .15s; }
-.dl b { font-size: 14px; font-weight: 600; letter-spacing: .02em; }
-.dl small { font-size: 11px; color: var(--muted); letter-spacing: .04em; }
+.dl { display: flex; flex-direction: column; gap: 2px; min-width: 250px; padding: 14px 20px; border: 1px solid var(--line-2); border-radius: 4px; background: var(--surface); font-family: var(--display); transition: border-color .15s, background .15s, transform .15s; }
+.dl b { font-size: 16px; font-weight: 700; letter-spacing: -.005em; }
+.dl small { font-size: 13px; font-weight: 500; color: var(--muted); }
 .dl:hover { border-color: var(--muted); transform: translateY(-1px); }
 .dl.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-.dl.primary small { color: rgba(255,255,255,.75); }
+.dl.primary small { color: rgba(255,255,255,.8); }
 .dl.primary:hover { background: var(--accent-hi); border-color: var(--accent-hi); }
 .links { display: flex; flex-wrap: wrap; gap: 8px; }
 .pill { font-size: 14px; padding: 7px 14px; border: 1px solid var(--line-2); border-radius: 999px; background: var(--surface); transition: border-color .15s; }
