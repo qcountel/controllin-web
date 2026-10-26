@@ -113,11 +113,13 @@ html[data-lang="ru"] body [lang="en"], html[data-lang="en"] body [lang="ru"] { d
 .price-num span { font-size: 44px; color: var(--accent); margin-left: 6px; }
 .price p { color: var(--muted); font-family: var(--mono); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; margin: 10px 0 26px; }
 .price .dl { width: 100%; }
+.price .price-legal { margin: 14px 0 0; font-family: inherit; font-size: 13px; letter-spacing: 0; text-transform: none; }
+.price-legal a { color: var(--text); border-bottom: 1px solid var(--accent); }
 .pro-list { list-style: none; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
 .pro-list li { padding: 22px 26px 22px 54px; border-bottom: 1px solid var(--line); position: relative; font-size: 16px; color: var(--muted); }
 .pro-list li:last-child { border-bottom: 0; }
 .pro-list li::before { content: "→"; position: absolute; left: 24px; color: var(--accent); font-family: var(--mono); }
-.pro-list a, .steps a, .faq a { color: var(--text); border-bottom: 1px solid var(--accent); }
+.pro-list a, .steps a, .faq a, .inside a { color: var(--text); border-bottom: 1px solid var(--accent); }
 
 .inside { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .inside > div { border-top: 1px solid var(--line-2); padding-top: 18px; }
