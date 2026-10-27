@@ -126,6 +126,17 @@ html[data-lang="ru"] body [lang="en"], html[data-lang="en"] body [lang="ru"] { d
 .inside h3 { font-size: 18px; margin-bottom: 8px; }
 .inside p { color: var(--muted); font-size: 14.5px; }
 
+.refund-lead { color: var(--muted); font-size: 16px; max-width: 820px; margin-bottom: 28px; }
+.refund-lead b { color: var(--text); }
+.refund { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.refund h3 { font-size: 18px; margin-bottom: 12px; }
+.refund .pro-list li { font-size: 15px; }
+.refund .pro-list b { color: var(--text); font-weight: 600; }
+.refund .pro-list.no li::before { content: "×"; color: var(--dim); }
+.refund-how { margin-top: 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); padding: 22px 26px; color: var(--muted); font-size: 15px; }
+.refund-how b { color: var(--text); }
+.refund-how a { color: var(--text); border-bottom: 1px solid var(--accent); }
+
 .steps { list-style: none; counter-reset: s; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .steps li { counter-increment: s; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); padding: 26px; }
 .steps li::before { content: "0" counter(s); display: block; font-family: var(--mono); font-size: 12px; color: var(--accent); margin-bottom: 14px; }
@@ -150,7 +161,7 @@ html[data-lang="ru"] body [lang="en"], html[data-lang="en"] body [lang="ru"] { d
   .hero { grid-template-columns: 1fr; min-height: 0; gap: 40px; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
   .inside { grid-template-columns: repeat(2, 1fr); }
-  .mod-cols, .pro { grid-template-columns: 1fr; }
+  .mod-cols, .pro, .refund { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
   .nav { display: none; }
