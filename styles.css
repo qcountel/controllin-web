@@ -109,9 +109,10 @@ html[data-lang="ru"] body [lang="en"], html[data-lang="en"] body [lang="ru"] { d
 
 .pro { display: grid; grid-template-columns: 360px 1fr; gap: 12px; }
 .price { border: 1px solid var(--accent); border-radius: 6px; padding: 30px; background: linear-gradient(160deg, rgba(194,69,122,.16), transparent 60%), var(--surface); }
-.price-num { font-size: 96px; font-weight: 800; letter-spacing: -.05em; line-height: 1; }
+.price-num { font-size: clamp(58px, 8vw, 80px); font-weight: 800; letter-spacing: -.05em; line-height: 1; }
 .price-num span { font-size: 44px; color: var(--accent); margin-left: 6px; }
 .price p { color: var(--muted); font-family: var(--mono); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; margin: 10px 0 26px; }
+.price .price-alt { margin: -16px 0 24px; font-family: inherit; font-size: 15px; letter-spacing: 0; text-transform: none; }
 .price .dl { width: 100%; }
 .price .price-legal { margin: 14px 0 0; font-family: inherit; font-size: 13px; letter-spacing: 0; text-transform: none; }
 .price-legal a { color: var(--text); border-bottom: 1px solid var(--accent); }
