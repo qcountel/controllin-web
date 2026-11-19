@@ -63,8 +63,7 @@ main[id], main [id] { scroll-margin-top: 88px; }
 .dl.primary:hover { background: var(--accent-hi); border-color: var(--accent-hi); }
 .versions { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .versions .label { flex-basis: 100%; font-size: 11px; letter-spacing: .035em; color: var(--muted); text-transform: uppercase; margin-bottom: 2px; }
-.ver { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-variant-numeric: tabular-nums; padding: 5px 8px; border: 1px solid var(--line-2); border-radius: 7px; background: var(--surface); color: var(--text); }
-.ver i { font-style: normal; font-size: 9px; color: var(--accent); }
+.ver { display: inline-flex; align-items: center; font-size: 12px; font-variant-numeric: tabular-nums; padding: 5px 8px; border: 1px solid var(--line-2); border-radius: 7px; background: var(--surface); color: var(--text); }
 .links { display: flex; flex-wrap: wrap; align-items: center; justify-content: end; gap: 4px 12px; }
 .pill { font-size: 14px; padding-block: 4px; border-bottom: 1px solid transparent; transition: border-color .15s; overflow-wrap: anywhere; }
 .pill i { font-style: normal; color: var(--muted); margin-right: 4px; }
