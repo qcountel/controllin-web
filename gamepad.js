@@ -97,7 +97,7 @@
     ctx.lineCap = 'round'; stroke(c, w); ctx.lineCap = 'butt';
   };
   const label = (x, y, t, size, c) => {
-    ctx.font = `600 ${size}px Manrope, "Segoe UI", Arial, sans-serif`;
+    ctx.font = `600 ${size}px system-ui, "Segoe UI", Arial, sans-serif`;
     ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
     ctx.fillStyle = css(c);
     ctx.fillText(t, x, y);
