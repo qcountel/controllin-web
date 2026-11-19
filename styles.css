@@ -179,7 +179,8 @@ main[id], main [id] { scroll-margin-top: 88px; }
   .nav a { padding-inline: 9px; }
   .hero { grid-template-columns: minmax(0, 1fr); }
   .downloads { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .hero-meta { grid-template-columns: minmax(0, 1fr); }
+  .hero-meta { grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 0; border: 0; background: transparent; }
+  .hero-meta > :is(.versions, .links) { padding: 14px; border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface); }
   .links { justify-content: start; }
   main[id], main [id] { scroll-margin-top: 16px; }
 }
