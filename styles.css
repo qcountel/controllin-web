@@ -143,11 +143,13 @@ main[id], main [id] { scroll-margin-top: 88px; }
 .refund-how b { color: var(--text); }
 .refund-how a { color: var(--text); border-bottom: 1px solid var(--accent); }
 
-.steps { list-style: none; counter-reset: s; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.steps li { counter-increment: s; border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface); padding: 26px; }
-.steps li::before { content: "0" counter(s); display: block; font-size: 12px; color: var(--accent); margin-bottom: 14px; }
-.steps b { font-size: 18px; display: block; margin-bottom: 8px; }
-.steps p { color: var(--muted); font-size: 15px; }
+.install-layout { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: clamp(24px, 3.5vw, 48px); align-items: center; }
+.launcher-preview { display: block; border-radius: var(--r-frame); overflow: hidden; background: var(--surface); cursor: zoom-in; }
+.launcher-preview img { width: 100%; height: auto; }
+.steps { display: grid; gap: 22px; padding-inline-start: 24px; }
+.steps li::marker { color: var(--accent-hi); font-weight: 700; }
+.steps b { font-size: 18px; display: block; margin-bottom: 5px; }
+.steps p { color: var(--muted); font-size: 16px; }
 
 .faq { border-top: 1px solid var(--line); }
 .faq details { border-bottom: 1px solid var(--line); }
@@ -179,10 +181,12 @@ main[id], main [id] { scroll-margin-top: 88px; }
   .hero-meta { grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 0; border: 0; background: transparent; }
   .hero-meta > :is(.versions, .links) { padding: 14px; border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface); }
   .links { justify-content: start; }
+  .install-layout { grid-template-columns: 1fr; }
   main[id], main [id] { scroll-margin-top: 16px; }
 }
 @media (max-width: 760px) {
-  .feature-grid, .inside, .steps { grid-template-columns: 1fr; }
+  .feature-grid, .inside { grid-template-columns: 1fr; }
+  .launcher-preview { border-radius: var(--r-card); }
   .feature.big { grid-template-columns: 1fr; padding: 26px; }
   .section { padding-top: 24px; }
   .foot-note { margin-left: 0; }
